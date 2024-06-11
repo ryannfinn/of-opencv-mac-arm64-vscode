@@ -43,12 +43,26 @@ Like this: `==> Pouring opencv--4.9.0_8.arm64_sonoma.bottle.tar.gz
 🍺  /opt/homebrew/Cellar/opencv/4.9.0_8: 965 files, 138.7MB`
 - When you tried to `which brew`, the result would be `/opt/homebrew/bin/brew`.
 
-As I also installed cmake with Homebrew, it has resulted in both the failure of compliation from source and directly downloading bottles from Homebrew. 
+As I also installed cmake with Homebrew, it has resulted in both the failure of compliation from source and directly downloading bottles from Homebrew. This is exactly what occurred in my case. (Reference: <https://docs.brew.sh/Common-Issues#unintentional-dual-homebrew-installations>)
+> Unintentional dual Homebrew installations
+When using tools such as Apple’s Migration Assistant (MA), it’s possible to have two Homebrew installations unintentionally. This most commonly results in MA copying /usr/local and /Applications from an Intel-based Mac to these same paths on an Apple Silicon-based Mac. This is problematic because /Applications may contain x86_64-only apps. Using an x86_64 terminal emulator will cause the shell to use the /usr/local installation of Homebrew instead of a new installation in /opt/homebrew, which is the correct path for an arm64 Homebrew installation on macOS.
 
-To 
+You can To rectify the installation from a setup like mine, please follow the instruction from Homebrew ([also this](<https://docs.brew.sh/Common-Issues#unintentional-dual-homebrew-installations>)) to get rid of the old x86-64 version of Homebrew to get a less chaotic installation enviornment in your MacBook lol. Or if you want to keep both arm and x86_64 version of Homebrew, at least make sure you are using the ARM one to install OpenCV and Clang for the shell/environment you're using. 
+
+
+
+
+
+
 
 
 ## Setting the correct flags and locations on VSCode
+
+https://stackoverflow.com/questions/24985713/opencv-undefined-symbols-for-architecture-x86-64-error
+
+pkg-configs
+followed the tutorial, but seems not enough
+
 
 ## No 
 follow a commit
