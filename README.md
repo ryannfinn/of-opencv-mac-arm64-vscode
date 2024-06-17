@@ -50,13 +50,11 @@ When using tools such as Apple’s Migration Assistant (MA), it’s possible to 
 You can To rectify the installation from a setup like mine, please follow the instruction from Homebrew ([also this](<https://docs.brew.sh/Common-Issues#unintentional-dual-homebrew-installations>)) to get rid of the old x86-64 version of Homebrew to get a less chaotic installation enviornment in your MacBook lol. Or if you want to keep both arm and x86_64 version of Homebrew, at least make sure you are using the ARM one to install OpenCV and Clang for the shell/environment you're using. 
 
 
-
-
-
-
-
-
 ## Setting the correct flags and locations on VSCode
+
+After having all 
+as you may see from the official documentation and the git tutorial, OpenFramework does not work without setup with natively generated project on VSCode.
+Gotta
 
 https://stackoverflow.com/questions/24985713/opencv-undefined-symbols-for-architecture-x86-64-error
 
